@@ -1,4 +1,3 @@
-import json
 import os
 
 from flask import Flask
@@ -23,8 +22,7 @@ def create_app():
     # Register index route
     @app.route('/')
     def hello():
-        response = json.dumps({"message": "I'm alive !!"})
-        return response, 200, {'Content-Type': 'application/json'}
+        return {"message": "I'm alive !!"}
 
     # Init database
     from . import db
