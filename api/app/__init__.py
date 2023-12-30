@@ -20,7 +20,7 @@ def create_app():
         pass
 
     # Register index route
-    @app.route('/')
+    @app.route('/api/hello')
     def hello():
         return {"message": "I'm alive !!"}
 

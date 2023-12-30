@@ -1,0 +1,11 @@
+services:
+  api:
+    build:
+      context: ./api/
+    restart: always
+    container_name: api
+  front:
+    build:
+      context: ./front/
+    ports:
+      - "80:80"
